@@ -1,0 +1,22 @@
+import React, { Component } from 'react'
+import ReactDOM from 'react-dom'
+const variables = require('./variables');
+
+class SearchBar extends Component {
+    render() {
+        return (
+            <form>
+                <input type="text" placeholder="Enter to Search" />
+                <input type="checkbox" /> 
+                {' '} 
+                Only show products available
+            </form>
+            
+        );
+    }
+}
+
+ReactDOM.render(
+    <SearchBar />,
+    document.getElementById('root')
+)
