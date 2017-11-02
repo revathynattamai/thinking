@@ -14,11 +14,6 @@ var config = {
         path: BUILD_DIR,
         filename: 'bundle.js'
     },
-    context: __dirname,
-    resolve: { 
-       root: __dirname, 
-       extensions: [ '.js', '.jsx', '.json' ] 
-    } ,
     devtool: 'inline-source-map',
     module: {
         loaders: [
@@ -33,7 +28,6 @@ var config = {
         new HtmlWebpackPlugin({ template: 'index.html' }),
         new webpack.HotModuleReplacementPlugin()
     ]
-    
 };
 
 module.exports = config;
