@@ -14,7 +14,6 @@ var config = {
         path: BUILD_DIR,
         filename: 'bundle.js'
     },
-
     devtool: 'inline-source-map',
     module: {
         rules: [
@@ -32,7 +31,6 @@ var config = {
     plugins: [
         new HtmlWebpackPlugin({ filename: 'index.html' })
     ]
-
 };
 
 module.exports = config;
