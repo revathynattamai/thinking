@@ -1,7 +1,9 @@
 
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CleanWebpackPlugin = require('clean-webpack-plugin');
 var webpack = require('webpack');
 var path = require('path');
+
 
 
 var BUILD_DIR = path.resolve(__dirname, '../dist');
@@ -29,7 +31,12 @@ var config = {
         ]
     },
     plugins: [
-        new HtmlWebpackPlugin({ filename: 'index.html' })
+        new CleanWebpackPlugin(['dist']),
+        new HtmlWebpackPlugin({
+            template: 'index.html',
+            filename: 'index.html'
+        }),
+        new webpack.HotModuleReplacementPlugin()
     ]
 };
 

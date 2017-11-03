@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import ReactDOM from 'react-dom'
-const variables = require('./variables');
 
 class SearchBar extends Component {
     render() {
@@ -19,4 +18,4 @@ class SearchBar extends Component {
 ReactDOM.render(
     <SearchBar />,
     document.getElementById('root')
-)
+);
