@@ -14,26 +14,25 @@ var config = {
         path: BUILD_DIR,
         filename: 'bundle.js'
     },
-    context: __dirname,
-    resolve: { 
-       root: __dirname, 
-       extensions: [ '.js', '.jsx', '.json' ] 
-    } ,
+
     devtool: 'inline-source-map',
     module: {
-        loaders: [
+        rules: [
+            // the 'transform-runtime' plugin tells babel to require the runtime
+            // instead of inlining it.
             {
-                test: /\.jsx?/,
-                include: APP_DIR,
-                loader: 'babel-loader'
+                test: /\.js$/,
+                exclude: /(node_modules)/,
+                use: {
+                    loader: 'babel-loader'
+                }
             }
         ]
     },
     plugins: [
-        new HtmlWebpackPlugin({ template: 'index.html' }),
-        new webpack.HotModuleReplacementPlugin()
+        new HtmlWebpackPlugin({ filename: 'index.html' })
     ]
-    
+
 };
 
 module.exports = config;
