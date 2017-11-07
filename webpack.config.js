@@ -1,15 +1,14 @@
 
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const CleanWebpackPlugin = require('clean-webpack-plugin');
 var webpack = require('webpack');
 var path = require('path');
 
 
+var BUILD_DIR = path.resolve(__dirname, 'dist');
+var APP_DIR = path.resolve(__dirname, 'src');
 
-var BUILD_DIR = path.resolve(__dirname, '../dist');
-var APP_DIR = path.resolve(__dirname, '../src');
-
-
+console.log(BUILD_DIR);
+console.log(APP_DIR);
 var config = {
     entry: APP_DIR + '/app.js',
     output: {
@@ -31,8 +30,7 @@ var config = {
         ]
     },
     plugins: [
-        new CleanWebpackPlugin(['dist']),
-        new HtmlWebpackPlugin({
+           new HtmlWebpackPlugin({
             template: 'index.html',
             filename: 'index.html'
         }),

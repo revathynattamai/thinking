@@ -6,8 +6,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "serve": "node server/start",
-    "build": "webpack-devserver",
-    "start": "npm run build && npm run serve"
+    "build": "webpack-dev-server",
+    "prod":"./node_modules/.bin/webpack",
+    "start": "npm run prod && npm run serve"
   },
   "author": "",
   "license": "ISC",
@@ -30,7 +31,6 @@
     "eslint-plugin-react": "^7.4.0",
     "webpack": "^3.8.1",
     "webpack-dev-server": "^2.9.3",
-    "webpack-devserver": "0.0.6",
     "webpack-hot-middleware": "^2.20.0"
   }
 }
