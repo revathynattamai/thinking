@@ -7,8 +7,6 @@ var path = require('path');
 var BUILD_DIR = path.resolve(__dirname, 'dist');
 var APP_DIR = path.resolve(__dirname, 'src');
 
-console.log(BUILD_DIR);
-console.log(APP_DIR);
 var config = {
     entry: APP_DIR + '/app.js',
     output: {
