@@ -5,10 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "serve": "node server/start",
-    "build": "webpack-dev-server",
-    "prod":"./node_modules/.bin/webpack",
-    "start": "npm run prod && npm run serve"
+    "start": "node server/start",
+    "build": "./node_modules/.bin/webpack-devserver",
+    "prod":"./node_modules/.bin/webpack"
   },
   "author": "",
   "license": "ISC",
